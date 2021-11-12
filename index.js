@@ -58,11 +58,12 @@ const zooAnimals = [
   */
 
   function animalNames(){
-    zooAnimals.forEach(function(item, arr){
-      item === arr[zooAnimals]
-      return `name: ${animal_name}, scientific: ${scientific_name}`
-    });
+    // zooAnimals.forEach(function(item, arr){
+    //   item === arr[zooAnimals]
+    //   return `name: ${animal_name}, scientific: ${scientific_name}`
+    // });
   }
+  // console.log(animalNames(zooAnimals))
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -71,10 +72,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(data){
+    const newAnimalData = data.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
   }
-  
+  // console.log(lowerCaseNames(zooAnimals))
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -82,7 +85,9 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+    const lowPop = zooAnimals.filter(function(item){
+      return item.population < 5;
+    });
   }
   
 
