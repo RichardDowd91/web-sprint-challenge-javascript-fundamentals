@@ -2,6 +2,8 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
+const { tsNamespaceExportDeclaration } = require("@babel/types");
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -56,8 +58,12 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(){
+  const displayNames = [];
+  function animalNames(array){
+    zooAnimals.forEach(function(item){
+      return `name: ${animal_name}, scientific: ${scientific_name}`
+    });
+    animalNames.displayNames(zooAnimals);
     // zooAnimals.forEach(function(item, arr){
     //   item === arr[zooAnimals]
     //   return `name: ${animal_name}, scientific: ${scientific_name}`
