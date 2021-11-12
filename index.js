@@ -27,13 +27,13 @@ myFunction();
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-const array1 = [1,2,3,4]
+const numbers = [1, 2, 3, 4, 5]
 function summation(array) {
-  // const singleValue = array.reduce((acc, item) =>{
-  //     return acc + item;
-  // },0);
+  const counter = array.reduce((sum, number) =>{
+      return sum + number;
+  }, 0);
  }
-//  console.log('task 2', summation(4, array1))
+ console.log(summation(numbers))
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -57,8 +57,11 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    zooAnimals.forEach(function(item, arr){
+      item === arr[zooAnimals]
+      return `name: ${animal_name}, scientific: ${scientific_name}`
+    });
   }
   
 
