@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+'In this instance the nested function can reach up to its parent and inherit its traits.'
 
 
 
@@ -27,12 +27,13 @@ myFunction();
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
- 
+const array1 = [1,2,3,4]
+function summation(array) {
+  // const singleValue = array.reduce((acc, item) =>{
+  //     return acc + item;
+  // },0);
+ }
+//  console.log('task 2', summation(4, array1))
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
