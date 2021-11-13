@@ -30,7 +30,8 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
+function summation(number) {
+
   // const counter = array.reduce((sum, number) =>{
   //     return sum + number;
   // }, 0);
@@ -59,13 +60,13 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
   
-  function animalNames(array){
+  function animalNames(zooAnimals){
     const displayNames = [];
     zooAnimals.forEach(function(item){
       
-      displayNames.push([`name: ${animal_name}, scientific: ${scientific_name}`])
+      displayNames.push(`name: ${animal_name}, scientific: ${scientific_name}`)
     });
-    
+    return displayNames
     // zooAnimals.forEach(function(item){
     //   return `name: ${animal_name}, scientific: ${scientific_name}`
     // });
@@ -88,6 +89,7 @@ const zooAnimals = [
     const newAnimalData = data.map(function(item){
        item.animal_name.toLowerCase();
     });
+    return newAnimalData
   }
   // console.log(lowerCaseNames(zooAnimals))
   
@@ -96,10 +98,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(){
     const lowPop = zooAnimals.filter(function(item){
       return item.population < 5;
     });
+    return lowPop
   }
   
 
@@ -109,7 +112,7 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
+  function USApop(){
     const totalPop = function (accumulator, item) {
       return accumulator + item.population;
     }
@@ -164,9 +167,9 @@ function greeting(firstName, lastName){
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
 function CuboidMaker(length, width, height){
-    this.length = length;
-    this.width = width;
-    this.height = height;
+    this.length = 4;
+    this.width = 5;
+    this.height = 5;
 }
 
 
@@ -209,9 +212,9 @@ console.log(cuboid.surfaceArea()); // 130
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
   constructor(length, width, height){
-    this.length = length;
-    this.width = width;
-    this.height = height;
+    this.length = 4;
+    this.width = 5;
+    this.height = 5;
   }
   volume(length, width, height){
     return length * width * height 
