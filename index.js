@@ -31,12 +31,16 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-
+  let counter = 0
+  for (let i = 0; i <= number; i++){
+    counter = i + counter
+  }
+  return counter
   // const counter = array.reduce((sum, number) =>{
   //     return sum + number;
   // }, 0);
  }
-//  console.log(summation())
+ console.log(summation(5))
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -66,7 +70,7 @@ const zooAnimals = [
       
       displayNames.push(`name: ${animal_name}, scientific: ${scientific_name}`)
     });
-    return displayNames
+    return displayNames 
     // zooAnimals.forEach(function(item){
     //   return `name: ${animal_name}, scientific: ${scientific_name}`
     // });
